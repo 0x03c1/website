@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DrinkExpress</title>
+  <title>CoffeeLab Academy</title>
 
-  <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -18,205 +18,287 @@
     }
 
     body{
-      background:#f5f5f5;
-      color:#222;
+      background:#f5f1eb;
+      color:#2c1b12;
     }
 
     header{
-      background:#ffd400;
-      padding:15px 5%;
+      background:#2c1b12;
+      padding:18px 6%;
       display:flex;
-      align-items:center;
       justify-content:space-between;
+      align-items:center;
       position:sticky;
       top:0;
       z-index:999;
-      box-shadow:0 2px 10px rgba(0,0,0,.08);
+      box-shadow:0 2px 10px rgba(0,0,0,.15);
     }
 
     .logo{
       font-size:2rem;
       font-weight:bold;
-      color:#000;
+      color:#f5c16c;
+      letter-spacing:1px;
     }
 
-    .search-box{
-      flex:1;
-      margin:0 30px;
-      position:relative;
-    }
-
-    .search-box input{
-      width:100%;
-      padding:14px 20px;
-      border:none;
-      border-radius:50px;
-      font-size:1rem;
-      outline:none;
-    }
-
-    .cart-btn{
-      background:#000;
-      color:#fff;
-      border:none;
-      padding:12px 18px;
-      border-radius:12px;
-      cursor:pointer;
-      font-weight:bold;
-    }
-
-    .hero{
-      background:linear-gradient(135deg,#ffd400,#ffb800);
-      min-height:350px;
+    nav{
       display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:50px 5%;
-      flex-wrap:wrap;
-    }
-
-    .hero-text{
-      max-width:500px;
-    }
-
-    .hero-text h1{
-      font-size:3rem;
-      margin-bottom:20px;
-      color:#000;
-    }
-
-    .hero-text p{
-      font-size:1.1rem;
-      line-height:1.7;
-      color:#333;
-    }
-
-    .hero button{
-      margin-top:25px;
-      padding:15px 25px;
-      border:none;
-      background:#000;
-      color:#fff;
-      border-radius:12px;
-      cursor:pointer;
-      font-size:1rem;
-      font-weight:bold;
-    }
-
-    .hero img{
-      width:350px;
-      max-width:100%;
-    }
-
-    .categories{
-      padding:40px 5%;
-    }
-
-    .categories h2{
-      margin-bottom:20px;
-    }
-
-    .category-list{
-      display:flex;
-      gap:15px;
-      overflow-x:auto;
-      padding-bottom:10px;
-    }
-
-    .category{
-      background:#fff;
-      padding:15px 25px;
-      border-radius:14px;
-      min-width:130px;
-      text-align:center;
-      box-shadow:0 2px 8px rgba(0,0,0,.05);
-      cursor:pointer;
-      transition:.3s;
-    }
-
-    .category:hover{
-      background:#ffd400;
-    }
-
-    .products{
-      padding:20px 5% 80px;
-    }
-
-    .products h2{
-      margin-bottom:25px;
-    }
-
-    .product-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
       gap:25px;
     }
 
-    .card{
-      background:#fff;
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:0 3px 12px rgba(0,0,0,.06);
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      transition:.3s;
+      font-weight:500;
+    }
+
+    nav a:hover{
+      color:#f5c16c;
+    }
+
+    .hero{
+      min-height:90vh;
+      background:
+      linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+      url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600");
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      align-items:center;
+      padding:0 6%;
+      color:#fff;
+    }
+
+    .hero-content{
+      max-width:650px;
+    }
+
+    .hero h1{
+      font-size:4rem;
+      line-height:1.1;
+      margin-bottom:25px;
+    }
+
+    .hero p{
+      font-size:1.2rem;
+      line-height:1.8;
+      color:#f1f1f1;
+    }
+
+    .hero-buttons{
+      margin-top:35px;
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:16px 28px;
+      border:none;
+      border-radius:12px;
+      cursor:pointer;
+      font-size:1rem;
+      font-weight:bold;
       transition:.3s;
     }
 
-    .card:hover{
-      transform:translateY(-5px);
+    .btn-primary{
+      background:#c58940;
+      color:#fff;
     }
 
-    .card img{
+    .btn-primary:hover{
+      background:#a96f2f;
+    }
+
+    .btn-secondary{
+      background:transparent;
+      border:2px solid #fff;
+      color:#fff;
+    }
+
+    .btn-secondary:hover{
+      background:#fff;
+      color:#000;
+    }
+
+    .section{
+      padding:90px 6%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:2.8rem;
+      margin-bottom:15px;
+      color:#2c1b12;
+    }
+
+    .section-title p{
+      color:#6d584c;
+      max-width:700px;
+      margin:auto;
+      line-height:1.7;
+    }
+
+    .courses-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .course-card{
+      background:#fff;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 5px 18px rgba(0,0,0,.08);
+      transition:.3s;
+    }
+
+    .course-card:hover{
+      transform:translateY(-6px);
+    }
+
+    .course-card img{
       width:100%;
       height:220px;
       object-fit:cover;
     }
 
-    .card-content{
-      padding:18px;
+    .course-content{
+      padding:25px;
     }
 
-    .card-content h3{
-      margin-bottom:10px;
+    .course-content h3{
+      margin-bottom:12px;
+      color:#2c1b12;
+    }
+
+    .course-content p{
+      color:#6d584c;
+      line-height:1.7;
+      margin-bottom:18px;
     }
 
     .price{
-      color:#00a650;
-      font-size:1.2rem;
+      font-size:1.3rem;
+      color:#c58940;
       font-weight:bold;
-      margin:12px 0;
+      margin-bottom:20px;
     }
 
-    .card button{
+    .course-content button{
       width:100%;
-      padding:12px;
+      padding:14px;
       border:none;
-      background:#ffd400;
-      border-radius:10px;
+      background:#2c1b12;
+      color:#fff;
+      border-radius:12px;
       cursor:pointer;
+      transition:.3s;
       font-weight:bold;
+    }
+
+    .course-content button:hover{
+      background:#c58940;
+    }
+
+    .coffee-section{
+      background:#2c1b12;
+      color:#fff;
+    }
+
+    .coffee-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      margin-top:50px;
+    }
+
+    .coffee-item{
+      background:#3a2418;
+      padding:30px;
+      border-radius:18px;
       transition:.3s;
     }
 
-    .card button:hover{
-      background:#ffbf00;
+    .coffee-item:hover{
+      background:#4b2f20;
+    }
+
+    .coffee-item h3{
+      margin-bottom:15px;
+      color:#f5c16c;
+    }
+
+    .coffee-item p{
+      line-height:1.7;
+      color:#e7d7ca;
+    }
+
+    .contact{
+      background:#fff;
+      border-radius:20px;
+      padding:40px;
+      max-width:700px;
+      margin:auto;
+      box-shadow:0 5px 18px rgba(0,0,0,.08);
+    }
+
+    .contact form{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    .contact input,
+    .contact textarea{
+      padding:15px;
+      border:1px solid #ddd;
+      border-radius:12px;
+      font-size:1rem;
+      outline:none;
+    }
+
+    .contact textarea{
+      min-height:140px;
+      resize:vertical;
+    }
+
+    .contact button{
+      padding:16px;
+      border:none;
+      background:#c58940;
+      color:#fff;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:bold;
+      font-size:1rem;
     }
 
     footer{
-      background:#111;
+      background:#1a100b;
       color:#fff;
       text-align:center;
-      padding:30px;
+      padding:35px;
+      margin-top:80px;
     }
 
     @media(max-width:768px){
 
       header{
-        flex-wrap:wrap;
-        gap:15px;
+        flex-direction:column;
+        gap:20px;
       }
 
-      .search-box{
-        width:100%;
-        margin:0;
+      nav{
+        flex-wrap:wrap;
+        justify-content:center;
       }
 
       .hero{
@@ -224,10 +306,12 @@
         justify-content:center;
       }
 
-      .hero-text h1{
-        font-size:2.3rem;
+      .hero h1{
+        font-size:2.8rem;
       }
+
     }
+
   </style>
 </head>
 <body>
@@ -235,251 +319,368 @@
   <!-- HEADER -->
   <header>
 
-    <div class="logo">DrinkExpress</div>
+    <div class="logo">☕ CoffeeLab Academy</div>
 
-    <div class="search-box">
-      <input type="text" placeholder="Buscar bebidas...">
-    </div>
-
-    <button class="cart-btn">
-      🛒 Carrinho
-    </button>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Cursos</a>
+      <a href="#">Barista</a>
+      <a href="#">Workshops</a>
+      <a href="#">Contato</a>
+    </nav>
 
   </header>
 
   <!-- HERO -->
   <section class="hero">
 
-    <div class="hero-text">
-      <h1>Bebidas geladas na sua porta 🍺</h1>
+    <div class="hero-content">
+
+      <h1>
+        Transforme paixão por café em profissão
+      </h1>
 
       <p>
-        Delivery rápido de cervejas, energéticos,
-        refrigerantes e muito mais.
+        Aprenda técnicas profissionais de barista,
+        latte art, extração perfeita e gestão de cafeteria
+        com especialistas do mercado.
       </p>
 
-      <button>Peça agora</button>
-    </div>
+      <div class="hero-buttons">
 
-    <img
-      src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1200"
-      alt="Bebidas"
-    />
+        <button class="btn btn-primary">
+          Ver Cursos
+        </button>
 
-  </section>
+        <button class="btn btn-secondary">
+          Agendar Aula
+        </button>
 
-  <!-- CATEGORIAS -->
-  <section class="categories">
-
-    <h2>Categorias</h2>
-
-    <div class="category-list">
-
-      <div class="category">🍺 Cervejas</div>
-      <div class="category">🥤 Refrigerantes</div>
-      <div class="category">⚡ Energéticos</div>
-      <div class="category">🍷 Vinhos</div>
-      <div class="category">🥃 Destilados</div>
-      <div class="category">🧃 Sucos</div>
+      </div>
 
     </div>
 
   </section>
 
-  <!-- PRODUTOS -->
-  <section class="products">
+  <!-- CURSOS -->
+  <section class="section">
 
-    <h2>Produtos</h2>
+    <div class="section-title">
 
-    <div class="product-grid" id="product-grid">
+      <h2>Nossos Cursos</h2>
 
-      <!-- PRODUTO -->
-      <div class="card">
+      <p>
+        Cursos presenciais e online para iniciantes,
+        empreendedores e futuros baristas profissionais.
+      </p>
+
+    </div>
+
+    <div class="courses-grid" id="courses-grid">
+
+      <!-- CURSO -->
+      <div class="course-card">
 
         <img
-          src="https://images.unsplash.com/photo-1608270586620-248524c67de9?q=80&w=1200"
-          alt="Cerveja"
+          src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=1200"
+          alt="Curso Barista"
         />
 
-        <div class="card-content">
+        <div class="course-content">
 
-          <h3>Heineken Long Neck</h3>
+          <h3>Curso de Barista Profissional</h3>
 
-          <p>330ml gelada</p>
+          <p>
+            Aprenda moagem, espresso, vaporização
+            de leite e atendimento profissional.
+          </p>
 
-          <div class="price">R$ 8,99</div>
+          <div class="price">
+            R$ 497
+          </div>
 
-          <button onclick="addToCart('Heineken Long Neck')">
-            Adicionar
+          <button onclick="enrollCourse('Curso de Barista')">
+            Inscrever-se
           </button>
 
         </div>
 
       </div>
 
-      <!-- PRODUTO -->
-      <div class="card">
+      <!-- CURSO -->
+      <div class="course-card">
 
         <img
-          src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a?q=80&w=1200"
-          alt="Energético"
+          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200"
+          alt="Latte Art"
         />
 
-        <div class="card-content">
+        <div class="course-content">
 
-          <h3>Red Bull</h3>
+          <h3>Workshop Latte Art</h3>
 
-          <p>250ml energético</p>
+          <p>
+            Crie desenhos incríveis no cappuccino
+            usando técnicas avançadas.
+          </p>
 
-          <div class="price">R$ 12,90</div>
+          <div class="price">
+            R$ 297
+          </div>
 
-          <button onclick="addToCart('Red Bull')">
-            Adicionar
+          <button onclick="enrollCourse('Latte Art')">
+            Inscrever-se
           </button>
 
         </div>
 
       </div>
 
-      <!-- PRODUTO -->
-      <div class="card">
+      <!-- CURSO -->
+      <div class="course-card">
 
         <img
-          src="https://images.unsplash.com/photo-1566633806327-68e152aaf26d?q=80&w=1200"
-          alt="Vinho"
+          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200"
+          alt="Gestão Cafeteria"
         />
 
-        <div class="card-content">
+        <div class="course-content">
 
-          <h3>Vinho Tinto</h3>
+          <h3>Gestão de Cafeteria</h3>
 
-          <p>750ml importado</p>
+          <p>
+            Aprenda estoque, marketing,
+            cardápio e administração completa.
+          </p>
 
-          <div class="price">R$ 49,90</div>
+          <div class="price">
+            R$ 697
+          </div>
 
-          <button onclick="addToCart('Vinho Tinto')">
-            Adicionar
+          <button onclick="enrollCourse('Gestão de Cafeteria')">
+            Inscrever-se
           </button>
 
         </div>
 
       </div>
+
+    </div>
+
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="section coffee-section">
+
+    <div class="section-title">
+
+      <h2 style="color:#fff;">
+        Por que estudar conosco?
+      </h2>
+
+      <p style="color:#e5d6cb;">
+        Formação completa para quem quer trabalhar
+        ou empreender no mercado de cafés especiais.
+      </p>
+
+    </div>
+
+    <div class="coffee-grid">
+
+      <div class="coffee-item">
+        <h3>☕ Cafés Especiais</h3>
+        <p>
+          Trabalhe com grãos premium e aprenda
+          métodos filtrados modernos.
+        </p>
+      </div>
+
+      <div class="coffee-item">
+        <h3>🎓 Certificação</h3>
+        <p>
+          Receba certificado profissional
+          reconhecido pelo mercado.
+        </p>
+      </div>
+
+      <div class="coffee-item">
+        <h3>🚀 Mercado de Trabalho</h3>
+        <p>
+          Conexão com cafeterias e oportunidades
+          para novos profissionais.
+        </p>
+      </div>
+
+      <div class="coffee-item">
+        <h3>🏆 Professores Experts</h3>
+        <p>
+          Aprenda com baristas premiados
+          e especialistas em cafés especiais.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTATO -->
+  <section class="section">
+
+    <div class="section-title">
+
+      <h2>Fale Conosco</h2>
+
+      <p>
+        Tire dúvidas sobre cursos, workshops
+        ou formação profissional.
+      </p>
+
+    </div>
+
+    <div class="contact">
+
+      <form>
+
+        <input
+          type="text"
+          placeholder="Seu nome"
+        />
+
+        <input
+          type="email"
+          placeholder="Seu e-mail"
+        />
+
+        <textarea
+          placeholder="Digite sua mensagem"
+        ></textarea>
+
+        <button type="submit">
+          Enviar Mensagem
+        </button>
+
+      </form>
 
     </div>
 
   </section>
 
   <footer>
-    © 2026 DrinkExpress - Delivery de bebidas
+    © 2026 CoffeeLab Academy — Escola de Baristas
   </footer>
 
   <script>
 
-    // ==========================
-    // CONFIG BANCO DE DADOS
-    // ==========================
+    // ==========================================
+    // API DO BACKEND
+    // ==========================================
 
     /*
-      EXEMPLO DE TABELA MYSQL
+      VOCÊ PODE CONECTAR:
+      - Node.js
+      - Express
+      - PHP
+      - Laravel
+      - Firebase
+      - FreeSQLDatabase
+    */
 
-      CREATE TABLE products (
+    const API_URL =
+      "http://localhost:3000/courses";
+
+    // ==========================================
+    // EXEMPLO MYSQL
+    // ==========================================
+
+    /*
+      CREATE TABLE courses (
         id INT AUTO_INCREMENT PRIMARY KEY,
-        name VARCHAR(255),
+        title VARCHAR(255),
         description TEXT,
         price DECIMAL(10,2),
         image TEXT
       );
-
     */
 
-    // ==========================
-    // API URL
-    // ==========================
+    // ==========================================
+    // BUSCAR CURSOS
+    // ==========================================
 
-    /*
-      VOCÊ VAI CRIAR UM BACKEND:
-
-      Node.js
-      PHP
-      Laravel
-      Express
-      etc
-
-      E CONECTAR AO:
-      https://www.freesqldatabase.com/
-
-      EXEMPLO:
-    */
-
-    const API_URL = "http://localhost:3000/products";
-
-    // ==========================
-    // BUSCAR PRODUTOS MYSQL
-    // ==========================
-
-    async function loadProducts(){
+    async function loadCourses(){
 
       try{
 
-        const response = await fetch(API_URL);
+        const response =
+          await fetch(API_URL);
 
-        const products = await response.json();
+        const courses =
+          await response.json();
 
-        const grid = document.getElementById("product-grid");
+        const grid =
+          document.getElementById("courses-grid");
 
         grid.innerHTML = "";
 
-        products.forEach(product => {
+        courses.forEach(course => {
 
           grid.innerHTML += `
-            <div class="card">
 
-              <img src="${product.image}" alt="${product.name}" />
+            <div class="course-card">
 
-              <div class="card-content">
+              <img
+                src="${course.image}"
+                alt="${course.title}"
+              />
 
-                <h3>${product.name}</h3>
+              <div class="course-content">
 
-                <p>${product.description}</p>
+                <h3>${course.title}</h3>
+
+                <p>${course.description}</p>
 
                 <div class="price">
-                  R$ ${product.price}
+                  R$ ${course.price}
                 </div>
 
-                <button onclick="addToCart('${product.name}')">
-                  Adicionar
+                <button
+                  onclick="enrollCourse('${course.title}')"
+                >
+                  Inscrever-se
                 </button>
 
               </div>
 
             </div>
+
           `;
 
         });
 
       }catch(error){
 
-        console.log("Erro ao carregar produtos", error);
+        console.log(error);
 
       }
 
     }
 
-    // ==========================
-    // CARRINHO
-    // ==========================
+    // ==========================================
+    // INSCRIÇÃO
+    // ==========================================
 
-    function addToCart(product){
+    function enrollCourse(course){
 
-      alert(product + " adicionado ao carrinho!");
+      alert(
+        "Você se inscreveu em: " + course
+      );
 
     }
 
-    // ==========================
+    // ==========================================
     // INICIAR
-    // ==========================
+    // ==========================================
 
-    // loadProducts();
+    // loadCourses();
 
   </script>
 
