@@ -1,4 +1,3 @@
-```md
 # ☕ CoffeeLab Academy
 
 Plataforma de cursos de barista com frontend estático (Netlify), backend Node.js e banco MySQL no FreeSQLDatabase.
@@ -36,7 +35,7 @@ coffeelab-academy/
 ├── netlify.toml
 └── README.md
 
-````
+```
 
 ---
 
@@ -90,7 +89,7 @@ CREATE TABLE contacts (
   message VARCHAR(1000),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-````
+```
 
 ---
 
