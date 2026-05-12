@@ -1,11 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senac</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyberpunk 2055</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, #1b0033 0%, #050510 40%, #000000 100%);
+      color:#fff;
+      overflow-x:hidden;
+      min-height:100vh;
+    }
+
+    /* GRID BACKGROUND */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background-image:
+        linear-gradient(rgba(0,255,255,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,255,.08) 1px, transparent 1px);
+      background-size:40px 40px;
+      z-index:-2;
+      transform:perspective(1000px) rotateX(70deg) scale(2);
+      transform-origin:top;
+    }
+
+    /* GLOW */
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,0,255,.2), transparent 30%),
+        radial-gradient(circle at 80% 30%, rgba(0,255,255,.2), transparent 30%),
+        radial-gradient(circle at 50% 80%, rgba(255,0,100,.2), transparent 40%);
+      z-index:-1;
+      filter:blur(40px);
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:25px 8%;
+      border-bottom:1px solid rgba(0,255,255,.2);
+      backdrop-filter:blur(10px);
+    }
+
+    .logo{
+      font-size:2rem;
+      font-weight:bold;
+      color:#00ffff;
+      text-shadow:0 0 10px #00ffff;
+      letter-spacing:3px;
+    }
+
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin-left:25px;
+      transition:.3s;
+      position:relative;
+    }
+
+    nav a:hover{
+      color:#ff00ff;
+      text-shadow:0 0 10px #ff00ff;
+    }
+
+    .hero{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      height:85vh;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:5rem;
+      text-transform:uppercase;
+      background:linear-gradient(90deg,#00ffff,#ff00ff,#ff0055);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      text-shadow:
+        0 0 20px rgba(0,255,255,.5),
+        0 0 40px rgba(255,0,255,.5);
+      animation:flicker 2s infinite alternate;
+    }
+
+    .hero p{
+      margin-top:20px;
+      max-width:700px;
+      color:#cfcfcf;
+      line-height:1.7;
+      font-size:1.1rem;
+    }
+
+    .buttons{
+      margin-top:40px;
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:15px 35px;
+      border:none;
+      cursor:pointer;
+      font-size:1rem;
+      font-weight:bold;
+      letter-spacing:1px;
+      transition:.3s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .btn-primary{
+      background:#00ffff;
+      color:#000;
+      box-shadow:0 0 20px #00ffff;
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-3px);
+      box-shadow:0 0 35px #00ffff;
+    }
+
+    .btn-secondary{
+      background:transparent;
+      color:#ff00ff;
+      border:1px solid #ff00ff;
+      box-shadow:0 0 15px rgba(255,0,255,.5);
+    }
+
+    .btn-secondary:hover{
+      background:#ff00ff;
+      color:#000;
+      box-shadow:0 0 35px #ff00ff;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      padding:80px 8%;
+    }
+
+    .card{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(0,255,255,.2);
+      padding:30px;
+      border-radius:15px;
+      backdrop-filter:blur(10px);
+      transition:.4s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      border-color:#ff00ff;
+      box-shadow:0 0 25px rgba(255,0,255,.4);
+    }
+
+    .card h3{
+      color:#00ffff;
+      margin-bottom:15px;
+    }
+
+    .card p{
+      color:#ccc;
+      line-height:1.6;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#777;
+      border-top:1px solid rgba(255,255,255,.1);
+      margin-top:40px;
+    }
+
+    @keyframes flicker{
+      0%{opacity:1;}
+      50%{opacity:.9;}
+      100%{opacity:1;}
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:3rem;
+      }
+
+      header{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      nav a{
+        margin:10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    Olá mundo!
+
+  <header>
+    <div class="logo">CYBER 2055</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Tecnologia</a>
+      <a href="#">Cidade</a>
+      <a href="#">IA</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Cyberpunk 2055</h1>
+
+    <p>
+      Bem-vindo à megacidade neon do futuro.
+      Inteligências artificiais controlam sistemas,
+      corporações dominam o mundo e hackers movem a nova revolução digital.
+    </p>
+
+    <div class="buttons">
+      <button class="btn btn-primary">Entrar na Rede</button>
+      <button class="btn btn-secondary">Explorar Cidade</button>
+    </div>
+  </section>
+
+  <section class="cards">
+
+    <div class="card">
+      <h3>Neural Link</h3>
+      <p>
+        Interface cerebral conectada diretamente
+        à nuvem quântica global.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Cyber Security</h3>
+      <p>
+        Firewalls inteligentes protegendo
+        identidades digitais em tempo real.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Night City</h3>
+      <p>
+        Arranha-céus holográficos iluminam
+        as ruas infinitas da metrópole futurista.
+      </p>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2055 CYBER SYSTEMS — Todos os direitos reservados.
+  </footer>
+
 </body>
 </html>
