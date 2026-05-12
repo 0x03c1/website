@@ -12,7 +12,7 @@ URL DA API
 */
 
 const API_BASE =
-  "https://SEU_BACKEND.netlify.app/api";
+  "https://website-senac.netlify.app/api";
 
 /*
 ==========================================
