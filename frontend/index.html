@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CoffeeLab Academy</title>
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+  <!-- ===================================== -->
+  <!-- HEADER -->
+  <!-- ===================================== -->
+
+  <header>
+
+    <div class="logo">
+      ☕ CoffeeLab Academy
+    </div>
+
+    <nav>
+
+      <a href="#home">
+        Home
+      </a>
+
+      <a href="#courses">
+        Cursos
+      </a>
+
+      <a href="#about">
+        Barista
+      </a>
+
+      <a href="#workshops">
+        Workshops
+      </a>
+
+      <a href="#contact">
+        Contato
+      </a>
+
+    </nav>
+
+  </header>
+
+  <!-- ===================================== -->
+  <!-- HERO -->
+  <!-- ===================================== -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>
+        Transforme paixão por café em profissão
+      </h1>
+
+      <p>
+        Aprenda técnicas profissionais de barista,
+        latte art, extração perfeita e gestão de
+        cafeteria com especialistas do mercado.
+      </p>
+
+      <div class="hero-buttons">
+
+        <button class="btn btn-primary" onclick="
+            document
+              .querySelector('#courses')
+              .scrollIntoView({
+                behavior:'smooth'
+              });
+          ">
+          Ver Cursos
+        </button>
+
+        <button class="btn btn-secondary" onclick="
+            document
+              .querySelector('#contact')
+              .scrollIntoView({
+                behavior:'smooth'
+              });
+          ">
+          Agendar Aula
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ===================================== -->
+  <!-- CURSOS -->
+  <!-- ===================================== -->
+
+  <section class="section" id="courses">
+
+    <div class="section-title">
+
+      <h2>
+        Nossos Cursos
+      </h2>
+
+      <p>
+        Cursos presenciais e online para iniciantes,
+        empreendedores e futuros baristas profissionais.
+      </p>
+
+    </div>
+
+    <!--
+      O APP.JS irá carregar os cursos
+      automaticamente aqui
+    -->
+
+    <div class="courses-grid" id="courses-grid">
+
+      <p>
+        Carregando cursos...
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- ===================================== -->
+  <!-- DIFERENCIAIS -->
+  <!-- ===================================== -->
+
+  <section class="section coffee-section" id="about">
+
+    <div class="section-title">
+
+      <h2 style="color:#fff;">
+        Por que estudar conosco?
+      </h2>
+
+      <p style="color:#e5d6cb;">
+        Formação completa para quem quer trabalhar
+        ou empreender no mercado de cafés especiais.
+      </p>
+
+    </div>
+
+    <div class="coffee-grid">
+
+      <div class="coffee-item">
+
+        <h3>
+          ☕ Cafés Especiais
+        </h3>
+
+        <p>
+          Trabalhe com grãos premium e aprenda
+          métodos filtrados modernos.
+        </p>
+
+      </div>
+
+      <div class="coffee-item">
+
+        <h3>
+          🎓 Certificação
+        </h3>
+
+        <p>
+          Receba certificado profissional
+          reconhecido pelo mercado.
+        </p>
+
+      </div>
+
+      <div class="coffee-item">
+
+        <h3>
+          🚀 Mercado de Trabalho
+        </h3>
+
+        <p>
+          Conexão com cafeterias e oportunidades
+          para novos profissionais.
+        </p>
+
+      </div>
+
+      <div class="coffee-item">
+
+        <h3>
+          🏆 Professores Experts
+        </h3>
+
+        <p>
+          Aprenda com baristas premiados
+          e especialistas em cafés especiais.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ===================================== -->
+  <!-- WORKSHOPS -->
+  <!-- ===================================== -->
+
+  <section class="section" id="workshops">
+
+    <div class="section-title">
+
+      <h2>
+        Workshops Intensivos
+      </h2>
+
+      <p>
+        Aprenda métodos filtrados, torra artesanal,
+        latte art avançado e experiências sensoriais.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- ===================================== -->
+  <!-- CONTATO -->
+  <!-- ===================================== -->
+
+  <section class="section" id="contact">
+
+    <div class="section-title">
+
+      <h2>
+        Fale Conosco
+      </h2>
+
+      <p>
+        Tire dúvidas sobre cursos,
+        workshops ou formação profissional.
+      </p>
+
+    </div>
+
+    <div class="contact">
+
+      <form id="contact-form">
+
+        <input type="text" placeholder="Seu nome" required />
+
+        <input type="email" placeholder="Seu e-mail" required />
+
+        <textarea placeholder="Digite sua mensagem" required></textarea>
+
+        <button type="submit">
+          Enviar Mensagem
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- ===================================== -->
+  <!-- FOOTER -->
+  <!-- ===================================== -->
+
+  <footer>
+
+    © 2026 CoffeeLab Academy —
+    Escola de Baristas
+
+  </footer>
+
+  <!-- ===================================== -->
+  <!-- APP JS -->
+  <!-- ===================================== -->
+
+  <script src="./app.js"></script>
+
+</body>
+
+</html>
